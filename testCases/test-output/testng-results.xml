@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1713589" started-at="2013-03-27T05:59:47Z" finished-at="2013-03-27T06:28:20Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1713589" started-at="2013-03-27T05:59:47Z" finished-at="2013-03-27T06:28:20Z">
+      <class name="com.dealwallet.webdriver.selenium.StoresPage">
+        <test-method status="PASS" signature="start()[pri:0, instance:com.dealwallet.webdriver.selenium.StoresPage@2810b7f7]" name="start" is-config="true" duration-ms="7287" started-at="2013-03-27T11:29:47Z" finished-at="2013-03-27T11:29:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="testStorePage()[pri:0, instance:com.dealwallet.webdriver.selenium.StoresPage@2810b7f7]" name="testStorePage" duration-ms="1705796" started-at="2013-03-27T11:29:54Z" finished-at="2013-03-27T11:58:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStorePage -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.dealwallet.webdriver.selenium.StoresPage@2810b7f7]" name="close" is-config="true" duration-ms="470" started-at="2013-03-27T11:58:20Z" finished-at="2013-03-27T11:58:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.dealwallet.webdriver.selenium.StoresPage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
