@@ -17,7 +17,9 @@ public class SampleDBConnection
 			Class.forName("org.postgresql.Driver");
 			// Create the connection using the static getConnection method
 			//jdbc:postgresql://
-			conn=DriverManager.getConnection("jdbc:postgresql://192.168.10.105:5432/DWDEVTEST","postgres","postgres123");
+			//"jdbc:postgresql://192.168.3.127:5432/dealwallet_batch_qa","postgres","postgres123"
+			conn=DriverManager.getConnection("jdbc:postgresql://192.168.10.103:5432/DWDEVTEST","postgres","postgres123");
+			//conn=DriverManager.getConnection("jdbc:postgresql://192.168.3.127:5432/dealwallet_batch_qa","postgres","postgres123");
 			//Create a Statement class to execute the SQL statement
 			Statement stmt=conn.createStatement();
 			//Execute the SQL statement and get the results in a Resultset
@@ -30,8 +32,8 @@ public class SampleDBConnection
 			{
 				//productgroup,title,merchantid,,,id,merchant_name,merchant_site_url
 				System.out.println(rs.getString("detailpageurl"));
-//				int resultset = rs.getRow();
-//				System.out.println("row count is "+resultset);
+				//				int resultset = rs.getRow();
+				//				System.out.println("row count is "+resultset);
 				//System.out.println("no.of rows are::"+rs.);
 				rowcount++;
 			}

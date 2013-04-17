@@ -26,7 +26,7 @@ public class StoresPage
 	@Test
 	public void testStorePage()
 	{
-		d.get("http://localhost:8080");
+		d.get("http://192.168.3.137:8080/");
 		d.findElement(By.linkText("Stores")).click();
 		String pc=d.getWindowHandle();
 		d.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);

@@ -41,12 +41,12 @@ public class StoresPage
 	@Test
 	public void testStoresPage() throws Exception
 	{
-		d.get("http://localhost:8080");
+		d.get("http://dealwallet.com");
 		d.manage().window().maximize();
 		d.manage().timeouts().implicitlyWait(60,TimeUnit.MINUTES);
 		d.findElement(By.linkText("Stores")).click();
 		String storesWindow=d.getWindowHandle();
-		for(int i=2;i<=100;i++)
+		for(int i=2;i<=10;i++)
 		{
 			d.findElement(By.xpath("//div["+i+"]/div/div/a/img")).click();
 			String href=d.findElement(By.xpath("//p/a")).getAttribute("href");

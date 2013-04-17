@@ -33,7 +33,7 @@ public class Books
 		String pc=d.getWindowHandle();
 		d.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 		d.findElement(By.linkText("Books")).click();
-		for(int i=1;i<=3;i++)
+		for(int i=1;i<=1;i++)
 		{
 			for(int k=1;k<=10;k++)
 			{
@@ -45,37 +45,44 @@ public class Books
 				for(String cc1:d.getWindowHandles())
 				{
 					d.switchTo().window(cc1);
+				}
+				if(d.getTitle().equalsIgnoreCase("Page Not Found"))
+				{
+					System.out.println("Page Not Found Error");
+				}
+				else
+				{
+					int isPresent = d.findElements(By.xpath("//h3/span")).size();
+					if(isPresent==0)
+					{
+						System.out.println("The Item Selected Is Not In The Merchants Site");
 					}
-				int isPresent = d.findElements(By.xpath("//h3/span")).size();
-				if(isPresent==0)
-				{
-					System.out.println("The Item Selected Is Not In The Merchants Site");
-				}
-				else
-				{
-				String merchant_price = d.findElement(By.xpath("//h3/span")).getText();
-                temp1=merchant_price.substring(1).trim();
-				temp1=temp1.replace(",", "");
-				merchant_price=temp1.replace("*", "");
-				if(dealwallet_price.equals(merchant_price))
-				{
-					System.out.println(k+"image both price are same");
-		     	}
-				else
-				{
-					System.out.println("page no::"+i+" and "+k+"image price are NOT same");
-					System.out.println("our::"+dealwallet_price+" & merchent::"+merchant_price);
-				}
+					else
+					{
+						String merchant_price = d.findElement(By.xpath("//h3/span")).getText();
+						temp1=merchant_price.substring(1).trim();
+						temp1=temp1.replace(",", "");
+						merchant_price=temp1.replace("*", "");
+						if(dealwallet_price.equals(merchant_price))
+						{
+							System.out.println(k+"image both price are same");
+						}
+						else
+						{
+							System.out.println("page no::"+i+" and "+k+"image price are NOT same");
+							System.out.println("our::"+dealwallet_price+" & merchent::"+merchant_price);
+						}
+					}
 				}
 				d.close();
 				System.out.println("++++++++++++++++++++++");
 				d.switchTo().window(pc);
-				}
+			}
 			System.out.println(i+" page is completed");
 			//Thread.sleep(9000);
 			d.findElement(By.linkText("Next")).click();
 			Thread.sleep(9000);
-			}
+		}
 	}
 
 }
