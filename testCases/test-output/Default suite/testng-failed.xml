@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.dealwallet.webdriver.selenium.dealwalletadmin.HealthCart">
+      <class name="com.dealwallet.webdriver.selenium.scraping.HealthCartWithPageLogic">
         <methods>
+          <include name="startup"/>
           <include name="stop"/>
           <include name="testHealthCart"/>
-          <include name="startup"/>
         </methods>
-      </class> <!-- com.dealwallet.webdriver.selenium.dealwalletadmin.HealthCart -->
+      </class> <!-- com.dealwallet.webdriver.selenium.scraping.HealthCartWithPageLogic -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

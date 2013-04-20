@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.james.mime4j.field.datetime.DateTime;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -17,7 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
+import com.dealwallet.webdriver.selenium.java.TestRS;
 public class HealthCart
 {
 	WebDriver d;
@@ -36,51 +37,59 @@ public class HealthCart
 	{
 		d.get("http://www.healthkart.com/");
 		d.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-		//getCategories();
+		getCategories();
 		getProducts();
 	}
 	private void getProducts()
 	{
+		TestRS trs= new TestRS();
 		getDocument();
-		//Document doc = Jsoup.parse(d.getPageSource());
-		//Elements body = doc.select("body").select("li").select("a");
 		Elements body;
 		body= getDocument().select("body").select("li").select("a");
 		for(Element cat:body)
 		{
 			String attr= cat.attr("href");
-			//System.out.println(attr);
 			String[] items= attr.split("/");
 			if(items.length==4)
 			{
 				Connection con= OpenDBConnection();
-
-				//System.out.println("It is a subcategory");
-				//getDocument().select("body").select("#prod_grid").select("div.img180").select("img")
 				d.navigate().to("http://www.healthkart.com/"+attr);
 				getDocument();
 				String url="";
 				String img="";
 				String pname="";
-				String pprice="";
-				String[] asinid;
+				int price=0;
+				String pprice="0";
 				String asin="";
+				String pgroup=items[3];
+				long nval;
 				body=getDocument().select("body").select("#prod_grid");
 				for(Element pro:body.select("div.grid_6.product"))
 				{
 					url=pro.select("a").attr("href");
-					System.out.println(url);
-					/*asinid=url.split("/");
-					asin=asinid[asinid.length-1];*/
-
+					asin=url.substring(url.lastIndexOf("/")+1, url.indexOf("?"));
+					System.out.println("asin id is ::"+asin);
+					System.out.println("product URl is ::"+"http://www.healthkart.com"+url);
 					img=pro.select("img").attr("src");
-					System.out.println(img);
+					System.out.println("image url is ::"+img);
 					pname=pro.select("a").select("img").attr("alt");
-					System.out.println(pname);
+					System.out.println("Product name is::"+pname);
 					pprice=pro.select("span.hk").text();
-					System.out.println(pprice);
-					insertProducts();
+					pprice=pprice.replace("Rs.", "").replace(",", "").trim();
+					price=Integer.parseInt(pprice);
+					System.out.println("Price is::"+pprice);
+					d.navigate().to("http://www.healthkart.com"+url);
+					getDocument();
+					Elements bodydesc=getDocument().select("body").select("div.product_details").select("p");
+					System.out.println("Description is::"+bodydesc.text());
+					d.navigate().back();
+					nval=trs.nextval();
+					System.out.println(nval);
+					insertProductsDB(con,asin,url,pgroup,pname,bodydesc.text());
+					insertPFPriceTbl(con,price,nval+1);
+					insertPFImgTbl(con,img,nval+1);
 				}
+				CloseDBConnection(con);
 			}
 			else
 			{
@@ -89,8 +98,52 @@ public class HealthCart
 		}
 
 	}
-	private void insertProducts() {
+	private void insertPFImgTbl(Connection con, String img, long nval) {
 		// TODO Auto-generated method stub
+		try {
+			String iquery="insert into productfeed_product_images(id,imagetype,imageurl,productid) values(nextval('productfeed_product_images_id_seq'),1,?,?);";
+			PreparedStatement ps=con.prepareStatement(iquery);
+			ps.setString(1, img);
+			ps.setLong(2, nval);
+			ps.executeUpdate();
+			ps.close();
+			System.out.println("product inserted successfully in productfeed_products_images table");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	private void insertPFPriceTbl(Connection con, int pprice, long nval) {
+		// TODO Auto-generated method stub
+		try {
+			String iquery="insert into productfeed_product_prices(id,pricetype,ammount,currencytcode,productid) values(nextval('productfeed_product_prices_id_seq'),1,?,'Rs.',?);";
+			PreparedStatement ps=con.prepareStatement(iquery);
+			ps.setInt(1, pprice);
+			ps.setLong(2, nval);
+			ps.executeUpdate();
+			ps.close();
+			System.out.println("product inserted successfully in productfeed_products_prices table");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+	private void insertProductsDB(Connection con, String asin, String url, String pgroup, String pname, String desc)
+	{
+		try {
+			String iquery="insert into productfeed_products(id,asin,detailpageurl,productgroup,lastmodefieddate,merchantid,title, description) values(nextval('productfeed_products_id_seq'),?,?,?,CURRENT_DATE,?,?,?);";
+			PreparedStatement ps=con.prepareStatement(iquery);
+			ps.setString(1, asin);
+			ps.setString(2, "http://www.healthkart.com"+url);
+			ps.setString(3, pgroup);
+			ps.setInt(4, 159);
+			ps.setString(5, pname);
+			ps.setString(6, desc);
+			ps.executeUpdate();
+			ps.close();
+			System.out.println("product inserted successfully in productfeed_products table");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 
 	}
 	private Document getDocument() {
@@ -112,15 +165,13 @@ public class HealthCart
 			if(catname.equalsIgnoreCase("HealthKartPlus >"))
 			{
 				break;
-				//insertDB(con,catname,url);
 			}
 			else
 			{
-				//break;
 				insertDB(con,catname,url);
 			}
 		}
-		CloseDBConnection();
+		CloseDBConnection(con);
 	}
 	private void insertDB(Connection con, String catname, String url) {
 		try {
@@ -135,8 +186,8 @@ public class HealthCart
 			e.printStackTrace();
 		}
 	}
-	private void CloseDBConnection() {
-		Connection conn=null;
+	private void CloseDBConnection(Connection conn) {
+		//Connection conn=null;
 		try {
 			if(conn != null)
 				conn.close();
@@ -150,7 +201,7 @@ public class HealthCart
 		try
 		{
 			Class.forName("org.postgresql.Driver");
-			conn=DriverManager.getConnection("jdbc:postgresql://192.168.3.127:5432/dealwallet_batch_qa","postgres","postgres123");
+			conn=DriverManager.getConnection("jdbc:postgresql://192.168.3.127:5432/dealwallet_batch_dev","postgres","postgres123");
 			System.out.println("Connection is open now");
 		}
 		catch(SQLException se)
