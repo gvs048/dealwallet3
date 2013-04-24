@@ -43,13 +43,13 @@ public class DBPgrm2 {
     @Test
     public void startDB() throws Exception
     {
-    	writer=new FileWriter("/home/tsssinfotech/Desktop/FilpKartProducts.csv");
+    	writer=new FileWriter("C:/Users/Tsss-Pc1/Desktop/FilpKartProducts.csv");
     	writer.append("dbPrice");writer.append(',');
 	    writer.append("merchantPrice");writer.append(',');
 	    writer.append("productId");writer.append(',');
 	    writer.append("pageUrl");writer.append(',');
 	    writer.append('\n');
-	    FileWriter fw = new FileWriter("/home/tsssinfotech/Desktop/FilpKartProductsdummy.xls");
+	    FileWriter fw = new FileWriter("C:/Users/Tsss-Pc1/Desktop/FilpKartProductsdummy.xls");
 	    fw.append("productId");fw.append(',');
 	    fw.append("dbPrice");fw.append(',');
 	    fw.append('\n');

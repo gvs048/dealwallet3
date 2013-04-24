@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="54666" started-at="2013-04-20T12:14:35Z" finished-at="2013-04-20T12:15:30Z">
+  <suite name="Default suite" duration-ms="68171" started-at="2013-04-24T06:12:35Z" finished-at="2013-04-24T06:13:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="54666" started-at="2013-04-20T12:14:35Z" finished-at="2013-04-20T12:15:30Z">
-      <class name="com.dealwallet.webdriver.selenium.scraping.HealthCartWithPageLogic">
-        <test-method status="PASS" signature="startup()[pri:0, instance:com.dealwallet.webdriver.selenium.scraping.HealthCartWithPageLogic@19a93a4]" name="startup" is-config="true" duration-ms="19807" started-at="2013-04-20T17:44:35Z" finished-at="2013-04-20T17:44:55Z">
+    <test name="Default test" duration-ms="68171" started-at="2013-04-24T06:12:35Z" finished-at="2013-04-24T06:13:43Z">
+      <class name="com.dealwallet.webdriver.selenium.scraping.Naaptol">
+        <test-method status="PASS" signature="startup()[pri:0, instance:com.dealwallet.webdriver.selenium.scraping.Naaptol@a33d00]" name="startup" is-config="true" duration-ms="22063" started-at="2013-04-24T11:42:35Z" finished-at="2013-04-24T11:42:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startup -->
-        <test-method status="PASS" signature="testHealthCart()[pri:0, instance:com.dealwallet.webdriver.selenium.scraping.HealthCartWithPageLogic@19a93a4]" name="testHealthCart" duration-ms="34274" started-at="2013-04-20T17:44:55Z" finished-at="2013-04-20T17:45:29Z">
+        <test-method status="PASS" signature="testnaaptol()[pri:0, instance:com.dealwallet.webdriver.selenium.scraping.Naaptol@a33d00]" name="testnaaptol" duration-ms="45640" started-at="2013-04-24T11:42:57Z" finished-at="2013-04-24T11:43:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testHealthCart -->
-        <test-method status="PASS" signature="stop()[pri:0, instance:com.dealwallet.webdriver.selenium.scraping.HealthCartWithPageLogic@19a93a4]" name="stop" is-config="true" duration-ms="564" started-at="2013-04-20T17:45:29Z" finished-at="2013-04-20T17:45:30Z">
+        </test-method> <!-- testnaaptol -->
+        <test-method status="PASS" signature="stop()[pri:0, instance:com.dealwallet.webdriver.selenium.scraping.Naaptol@a33d00]" name="stop" is-config="true" duration-ms="452" started-at="2013-04-24T11:43:43Z" finished-at="2013-04-24T11:43:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stop -->
-      </class> <!-- com.dealwallet.webdriver.selenium.scraping.HealthCartWithPageLogic -->
+      </class> <!-- com.dealwallet.webdriver.selenium.scraping.Naaptol -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

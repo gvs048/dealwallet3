@@ -10,7 +10,7 @@
 	<classpathentry kind="lib" path="C:/Users/Tsss-Pc1/Downloads/selenium-java-2.32.0.zip"/>
 	<classpathentry kind="lib" path="C:/Users/Tsss-Pc1/Downloads/subbuDownloads/jsoup-1.7.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Tsss-Pc1/Downloads/subbuDownloads/commons-httpclient-3.1-rc1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Tsss-Pc1/Downloads/subbuDownloads/webharvest2b1-exe/webharvest_all_2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Tsss-Pc1/Downloads/subbuDownloads/postgresql-9.2-1002.jdbc4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tsss-Pc1/Downloads/subbuDownloads/jxl-2.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
