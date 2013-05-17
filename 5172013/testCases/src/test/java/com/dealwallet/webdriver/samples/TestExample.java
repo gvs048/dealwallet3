@@ -6,19 +6,19 @@ public class TestExample {
 
 	SendEmail sm=new SendEmail();
 	String s="";
-	@Test(priority=3)
+	@Test(enabled=false)
 	public void test1()
 	{
 		s+="@First Test"+ "\n";
 		//System.out.println(s);
 	}
-	@Test(priority=1)
+	@Test(enabled=false)
 	public void test2()
 	{
 		s+="@Second Test"+ "\n";
 		//System.out.println(s);
 	}
-	@Test(priority=2)
+	@Test(priority=2,enabled=false)
 	public void test3()
 	{
 		s+="@Third Test"+ "\n";
@@ -30,7 +30,7 @@ public class TestExample {
 		s+="@Fourth Test"+ "\n";
 		//System.out.println(s);
 	}
-	@Test(priority=4)
+	@Test(priority=4,enabled=false)
 	public void test5()
 	{
 		s+="@Fifth Test"+ "\n";
@@ -40,6 +40,6 @@ public class TestExample {
 public void testLast()
 {
 		System.out.println(s);
-	sm.sendingMail(s);
+	//sm.sendingMail(s);
 }
 }

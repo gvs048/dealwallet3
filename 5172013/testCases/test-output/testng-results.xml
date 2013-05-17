@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5385" started-at="2013-05-16T13:54:48Z" finished-at="2013-05-16T13:54:53Z">
+  <suite name="Default suite" duration-ms="159076" started-at="2013-05-17T12:58:42Z" finished-at="2013-05-17T13:01:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5385" started-at="2013-05-16T13:54:48Z" finished-at="2013-05-16T13:54:53Z">
-      <class name="com.dealwallet.webdriver.selenium05082013.db.SampleStoresDBComparision">
-        <test-method status="PASS" signature="test()[pri:0, instance:com.dealwallet.webdriver.selenium05082013.db.SampleStoresDBComparision@1b51061]" name="test" duration-ms="5367" started-at="2013-05-16T19:24:48Z" finished-at="2013-05-16T19:24:53Z">
+    <test name="Default test" duration-ms="159076" started-at="2013-05-17T12:58:42Z" finished-at="2013-05-17T13:01:21Z">
+      <class name="com.dealwallet.webdriver.samples.Captcha">
+        <test-method status="PASS" signature="startup()[pri:0, instance:com.dealwallet.webdriver.samples.Captcha@1023565]" name="startup" is-config="true" duration-ms="8789" started-at="2013-05-17T18:28:42Z" finished-at="2013-05-17T18:28:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- com.dealwallet.webdriver.selenium05082013.db.SampleStoresDBComparision -->
+        </test-method> <!-- startup -->
+        <test-method status="PASS" signature="testCaptha()[pri:0, instance:com.dealwallet.webdriver.samples.Captcha@1023565]" name="testCaptha" duration-ms="149829" started-at="2013-05-17T18:28:50Z" finished-at="2013-05-17T18:31:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCaptha -->
+        <test-method status="PASS" signature="stop()[pri:0, instance:com.dealwallet.webdriver.samples.Captcha@1023565]" name="stop" is-config="true" duration-ms="443" started-at="2013-05-17T18:31:20Z" finished-at="2013-05-17T18:31:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stop -->
+      </class> <!-- com.dealwallet.webdriver.samples.Captcha -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

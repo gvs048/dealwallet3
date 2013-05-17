@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.dealwallet.webdriver.selenium05082013.db.SampleStoresDBComparision">
+      <class name="com.dealwallet.webdriver.samples.Captcha">
         <methods>
+          <include name="testCaptha"/>
           <include name="stop"/>
-          <include name="start"/>
-          <include name="test"/>
+          <include name="startup"/>
         </methods>
-      </class> <!-- com.dealwallet.webdriver.selenium05082013.db.SampleStoresDBComparision -->
+      </class> <!-- com.dealwallet.webdriver.samples.Captcha -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
