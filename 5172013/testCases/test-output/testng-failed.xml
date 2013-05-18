@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="2" name="Failed suite [Suite1]" parallel="tests">
+  <test name="Firefox on Windows(failed)" parallel="tests">
     <classes>
+      <class name="com.dealwallet.webdriver.samples.Zovi">
+        <methods>
+          <include name="stop"/>
+          <include name="startup"/>
+          <include name="testExample"/>
+        </methods>
+      </class> <!-- com.dealwallet.webdriver.samples.Zovi -->
       <class name="com.dealwallet.webdriver.samples.Captcha">
         <methods>
           <include name="testCaptha"/>
@@ -11,5 +18,5 @@
         </methods>
       </class> <!-- com.dealwallet.webdriver.samples.Captcha -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Firefox on Windows(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

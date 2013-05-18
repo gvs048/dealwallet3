@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="159076" started-at="2013-05-17T12:58:42Z" finished-at="2013-05-17T13:01:21Z">
+  <suite name="My test suite" duration-ms="46" started-at="2013-05-18T05:58:26Z" finished-at="2013-05-18T05:58:26Z">
     <groups>
+      <group name="G3">
+        <method signature="Groupprog.method4()[pri:0, instance:com.dealwallet.webdriver.samples.Groupprog@d4db38]" name="method4" class="com.dealwallet.webdriver.samples.Groupprog"/>
+      </group> <!-- G3 -->
+      <group name="G1">
+        <method signature="Groupprog.method3()[pri:0, instance:com.dealwallet.webdriver.samples.Groupprog@d4db38]" name="method3" class="com.dealwallet.webdriver.samples.Groupprog"/>
+        <method signature="group1.method1()[pri:0, instance:com.dealwallet.webdriver.samples.group1@133badd]" name="method1" class="com.dealwallet.webdriver.samples.group1"/>
+        <method signature="group1.method3()[pri:0, instance:com.dealwallet.webdriver.samples.group1@133badd]" name="method3" class="com.dealwallet.webdriver.samples.group1"/>
+      </group> <!-- G1 -->
     </groups>
-    <test name="Default test" duration-ms="159076" started-at="2013-05-17T12:58:42Z" finished-at="2013-05-17T13:01:21Z">
-      <class name="com.dealwallet.webdriver.samples.Captcha">
-        <test-method status="PASS" signature="startup()[pri:0, instance:com.dealwallet.webdriver.samples.Captcha@1023565]" name="startup" is-config="true" duration-ms="8789" started-at="2013-05-17T18:28:42Z" finished-at="2013-05-17T18:28:50Z">
+    <test name="Group Test Demo" duration-ms="46" started-at="2013-05-18T05:58:26Z" finished-at="2013-05-18T05:58:26Z">
+      <class name="com.dealwallet.webdriver.samples.Groupprog">
+        <test-method status="PASS" signature="method3()[pri:0, instance:com.dealwallet.webdriver.samples.Groupprog@d4db38]" name="method3" duration-ms="22" started-at="2013-05-18T11:28:26Z" finished-at="2013-05-18T11:28:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method status="PASS" signature="testCaptha()[pri:0, instance:com.dealwallet.webdriver.samples.Captcha@1023565]" name="testCaptha" duration-ms="149829" started-at="2013-05-17T18:28:50Z" finished-at="2013-05-17T18:31:20Z">
+        </test-method> <!-- method3 -->
+        <test-method status="PASS" signature="method4()[pri:0, instance:com.dealwallet.webdriver.samples.Groupprog@d4db38]" name="method4" duration-ms="1" started-at="2013-05-18T11:28:26Z" finished-at="2013-05-18T11:28:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCaptha -->
-        <test-method status="PASS" signature="stop()[pri:0, instance:com.dealwallet.webdriver.samples.Captcha@1023565]" name="stop" is-config="true" duration-ms="443" started-at="2013-05-17T18:31:20Z" finished-at="2013-05-17T18:31:21Z">
+        </test-method> <!-- method4 -->
+      </class> <!-- com.dealwallet.webdriver.samples.Groupprog -->
+      <class name="com.dealwallet.webdriver.samples.group1">
+        <test-method status="PASS" signature="method1()[pri:0, instance:com.dealwallet.webdriver.samples.group1@133badd]" name="method1" duration-ms="1" started-at="2013-05-18T11:28:26Z" finished-at="2013-05-18T11:28:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- stop -->
-      </class> <!-- com.dealwallet.webdriver.samples.Captcha -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- method1 -->
+        <test-method status="PASS" signature="method3()[pri:0, instance:com.dealwallet.webdriver.samples.group1@133badd]" name="method3" duration-ms="1" started-at="2013-05-18T11:28:26Z" finished-at="2013-05-18T11:28:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method3 -->
+      </class> <!-- com.dealwallet.webdriver.samples.group1 -->
+    </test> <!-- Group Test Demo -->
+  </suite> <!-- My test suite -->
 </testng-results>
