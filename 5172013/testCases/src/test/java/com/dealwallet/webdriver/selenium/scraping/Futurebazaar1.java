@@ -136,7 +136,7 @@ for(Element body : bodies )
 		String instructor = elements.first().text();
 
 		// eg. print the result
-*/		System.out.println(doc);
+*/		System.out.println(doc.select("body"));
 	
 	}
 }
