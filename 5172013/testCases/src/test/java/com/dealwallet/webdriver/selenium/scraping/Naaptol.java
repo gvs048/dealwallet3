@@ -33,7 +33,7 @@ public class Naaptol
 		Elements body = doc.select("body").select("li");
 		System.out.println(body);*/
 
-		d.get("http://www.naaptol.com/buy/mobile_phones/mobile_handsets.html");
+		d.get("http://www.smartoye.com/smart-mobiles/blackberry-phones");
 		d.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 		Document doc = Jsoup.parse(d.getPageSource());
 		Elements body = doc.select("body").select("li");
