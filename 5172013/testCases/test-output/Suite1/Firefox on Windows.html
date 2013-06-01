@@ -1,12 +1,17 @@
 <html>
 <head>
-<title>TestNG:  Firefox on Windows</title>
+<title>TestNG: Firefox on Windows</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
-.log { display: none;} 
-.stack-trace { display: none;} 
+.log {
+	display: none;
+}
+
+.stack-trace {
+	display: none;
+}
 </style>
 <script type="text/javascript">
 <!--
@@ -53,30 +58,48 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Firefox on Windows</h2><table border='1' align="center">
-<tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
-</tr><tr>
-<td>Started on:</td><td>Sat May 18 11:24:48 IST 2013</td>
-</tr>
-<tr><td>Total time:</td><td>96 seconds (96302 ms)</td>
-</tr><tr>
-<td>Included groups:</td><td></td>
-</tr><tr>
-<td>Excluded groups:</td><td></td>
-</tr>
-</table><p/>
-<small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.dealwallet.webdriver.samples.Zovi.stop()'><b>stop</b><br>Test class: com.dealwallet.webdriver.samples.Zovi</td>
-<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+	<h2 align='center'>Firefox on Windows</h2>
+	<table border='1' align="center">
+		<tr>
+			<td>Tests passed/Failed/Skipped:</td>
+			<td>2/2/0</td>
+		</tr>
+		<tr>
+			<td>Started on:</td>
+			<td>Sat May 18 11:24:48 IST 2013</td>
+		</tr>
+		<tr>
+			<td>Total time:</td>
+			<td>96 seconds (96302 ms)</td>
+		</tr>
+		<tr>
+			<td>Included groups:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Excluded groups:</td>
+			<td></td>
+		</tr>
+	</table>
+	<p />
+	<small><i>(Hover the method name to see the test class
+			name)</i></small>
+	<p />
+	<table width='100%' border='1' class='invocation-failed'>
+		<tr>
+			<td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='com.dealwallet.webdriver.samples.Zovi.stop()'><b>stop</b><br>Test
+				class: com.dealwallet.webdriver.samples.Zovi</td>
+			<td><div>
+					<pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.32.0&apos;, revision: &apos;6c40c18&apos;, time: &apos;2013-04-09 17:22:56&apos;
 System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_21&apos;
 Driver info: driver.version: RemoteWebDriver
@@ -114,8 +137,13 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	... 32 more
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2514815", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2514815'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+... Removed 14 stack frames</pre>
+				</div>
+				<a href='#'
+				onClick='toggleBox("stack-trace2514815", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace2514815'>
+					<pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.32.0&apos;, revision: &apos;6c40c18&apos;, time: &apos;2013-04-09 17:22:56&apos;
 System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_21&apos;
 Driver info: driver.version: RemoteWebDriver
@@ -167,20 +195,28 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	... 32 more
-</pre></div></td>
-<td>0</td>
-<td>null</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.dealwallet.webdriver.samples.Captcha.testCaptha()'><b>testCaptha</b><br>Test class: com.dealwallet.webdriver.samples.Captcha</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;link-signup&quot;}
+</pre>
+				</div></td>
+			<td>0</td>
+			<td>null</td>
+		</tr>
+	</table>
+	<p>
+	<table width='100%' border='1' class='invocation-failed'>
+		<tr>
+			<td colspan='4' align='center'><b>FAILED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='com.dealwallet.webdriver.samples.Captcha.testCaptha()'><b>testCaptha</b><br>Test
+				class: com.dealwallet.webdriver.samples.Captcha</td>
+			<td><div>
+					<pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;link-signup&quot;}
 Command duration or timeout: 2.12 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.32.0&apos;, revision: &apos;6c40c18&apos;, time: &apos;2013-04-09 17:22:56&apos;
@@ -210,8 +246,13 @@ Driver info: driver.version: unknown
 	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Tsss-Pc1/AppData/Local/Temp/anonymous2074524443557796546webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10421)
 	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/Tsss-Pc1/AppData/Local/Temp/anonymous2074524443557796546webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10426)
 	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/Tsss-Pc1/AppData/Local/Temp/anonymous2074524443557796546webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10366)
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace14766055", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace14766055'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;link-signup&quot;}
+... Removed 20 stack frames</pre>
+				</div>
+				<a href='#'
+				onClick='toggleBox("stack-trace14766055", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace14766055'>
+					<pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;link-signup&quot;}
 Command duration or timeout: 2.12 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.32.0&apos;, revision: &apos;6c40c18&apos;, time: &apos;2013-04-09 17:22:56&apos;
@@ -261,12 +302,16 @@ Driver info: driver.version: unknown
 	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Tsss-Pc1/AppData/Local/Temp/anonymous2074524443557796546webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10421)
 	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/Tsss-Pc1/AppData/Local/Temp/anonymous2074524443557796546webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10426)
 	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/Tsss-Pc1/AppData/Local/Temp/anonymous2074524443557796546webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10366)
-</pre></div></td>
-<td>7</td>
-<td>com.dealwallet.webdriver.samples.Captcha@1bf61a0</td></tr>
-<tr>
-<td title='com.dealwallet.webdriver.samples.Zovi.testExample()'><b>testExample</b><br>Test class: com.dealwallet.webdriver.samples.Zovi</td>
-<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+</pre>
+				</div></td>
+			<td>7</td>
+			<td>com.dealwallet.webdriver.samples.Captcha@1bf61a0</td>
+		</tr>
+		<tr>
+			<td title='com.dealwallet.webdriver.samples.Zovi.testExample()'><b>testExample</b><br>Test
+				class: com.dealwallet.webdriver.samples.Zovi</td>
+			<td><div>
+					<pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.32.0&apos;, revision: &apos;6c40c18&apos;, time: &apos;2013-04-09 17:22:56&apos;
 System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_21&apos;
 Driver info: driver.version: RemoteWebDriver
@@ -304,8 +349,13 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	... 34 more
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace10405737", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace10405737'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+... Removed 16 stack frames</pre>
+				</div>
+				<a href='#'
+				onClick='toggleBox("stack-trace10405737", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace10405737'>
+					<pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.32.0&apos;, revision: &apos;6c40c18&apos;, time: &apos;2013-04-09 17:22:56&apos;
 System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_21&apos;
 Driver info: driver.version: RemoteWebDriver
@@ -359,27 +409,38 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	... 34 more
-</pre></div></td>
-<td>68</td>
-<td>com.dealwallet.webdriver.samples.Zovi@1f323bd</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.dealwallet.webdriver.samples.TestExample.test4()'><b>test4</b><br>Test class: com.dealwallet.webdriver.samples.TestExample</td>
-<td></td>
-<td>0</td>
-<td>com.dealwallet.webdriver.samples.TestExample@bf8cf5</td></tr>
-<tr>
-<td title='com.dealwallet.webdriver.samples.TestExample.testLast()'><b>testLast</b><br>Test class: com.dealwallet.webdriver.samples.TestExample</td>
-<td></td>
-<td>0</td>
-<td>com.dealwallet.webdriver.samples.TestExample@bf8cf5</td></tr>
-</table><p>
+</pre>
+				</div></td>
+			<td>68</td>
+			<td>com.dealwallet.webdriver.samples.Zovi@1f323bd</td>
+		</tr>
+	</table>
+	<p>
+	<table width='100%' border='1' class='invocation-passed'>
+		<tr>
+			<td colspan='4' align='center'><b>PASSED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='com.dealwallet.webdriver.samples.TestExample.test4()'><b>test4</b><br>Test
+				class: com.dealwallet.webdriver.samples.TestExample</td>
+			<td></td>
+			<td>0</td>
+			<td>com.dealwallet.webdriver.samples.TestExample@bf8cf5</td>
+		</tr>
+		<tr>
+			<td title='com.dealwallet.webdriver.samples.TestExample.testLast()'><b>testLast</b><br>Test
+				class: com.dealwallet.webdriver.samples.TestExample</td>
+			<td></td>
+			<td>0</td>
+			<td>com.dealwallet.webdriver.samples.TestExample@bf8cf5</td>
+		</tr>
+	</table>
+	<p>
 </body>
 </html>

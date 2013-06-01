@@ -32,7 +32,6 @@ public class Smartoye
 		d.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 		Document doc = Jsoup.parse(d.getPageSource());
 		Elements body = doc.select("body").select("li");
-		//doc.select("body").select("div.catSearchDiv").select("div.subMenuList").select("li")
 		System.out.println(body);
 	}
 }

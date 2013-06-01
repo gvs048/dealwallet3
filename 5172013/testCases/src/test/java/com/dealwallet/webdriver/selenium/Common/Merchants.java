@@ -216,6 +216,65 @@ public class Merchants
 		}
 	}
 
+	public void shopclues(String ammount, WebDriver d)
+	{
+		price=d.findElement(By.xpath("//div[@class='float-left product-prices']")).getText();
+		String[] str=price.split("Rs.");
+		price=str[str.length-1];
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	public void surf2buy(String ammount, WebDriver d)
+	{
+		price=d.findElement(By.cssSelector("div.price")).getText();
+		
+		String[] str=price.split(":");
+		str=str[1].split(" ");
+		
+		if(str.length>2)
+		{
+			price=str[2].replace(",", "").replace(".00", "");
+		}
+		else
+		{
+			price = str[1].replace(",", "").replace(".00", "");
+		}
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	public void hindbuy(String ammount, WebDriver d)
+	{
+		price= d.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_Price_ctl00_lblOfferPrice")).getText();
+		//System.out.println(s);
+		price=price.replace("Rs.", "");
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
 
 	/**
 	 * This method is used to identify the site name in the url.
@@ -263,4 +322,7 @@ public class Merchants
 		d.findElement(By.linkText("Products")).click();
 		return pcode;
 	}
+	
+	
+	
 }
