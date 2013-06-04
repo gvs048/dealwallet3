@@ -276,6 +276,217 @@ public class Merchants
 	}
 	
 
+	public void next(String ammount, WebDriver d)
+	{
+		price= d.findElement(By.cssSelector("span.price")).getText();
+		//System.out.println(s);
+		price=price.replace("Rs", "").replace(",","").trim();
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	
+	public void grabmore(String ammount, WebDriver d)
+	{
+		price= d.findElement(By.xpath("//div[@class='price_contain']")).getText();
+		//System.out.println(s);
+		String[] items=price.replace(",", "").replace("\n", " ").split(" ");
+		price=items[1];
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	
+	public void clik2pick(String ammount, WebDriver d)
+	{
+		price= d.findElement(By.xpath("//div[@class='col2 price']")).getText();
+		//System.out.println(s);
+		price=price.replace("Rs.", "").replace(".00", "").replace(",", "");
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	public void fabmart(String ammount, WebDriver d)
+	{
+		price= d.findElement(By.xpath("//span[2]/span")).getText();
+		//System.out.println(s);
+		price=price.replace(" - Sold Out", "");
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	
+	
+	public void ezmaal(String ammount, WebDriver d)
+	{
+		price= d.findElement(By.cssSelector("p.price > span")).getText();
+		//System.out.println(s);
+		price=price.replace("Rs.", "").replace(",", "");
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	
+	public void smartoye(String ammount, WebDriver d)
+	{
+		price= d.findElement(By.cssSelector("div.right > div.price")).getText();
+		//System.out.println(s);
+		price=price.substring(price.lastIndexOf("RS."), price.lastIndexOf(".00")).replace(",", "").replace("RS.", "");
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	
+	public void edigiworld(String ammount, WebDriver d)
+	{
+		price= d.findElement(By.xpath("//p/span")).getText();
+		//System.out.println(s);
+		price=price.replace("Rs", "").replace(",", "").trim();
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	
+	public void edabba(String ammount, WebDriver d)
+	{
+		int s= d.findElements(By.xpath("//div[@class='price ']")).size();
+		if(s==0)
+		{
+			price=d.findElement(By.xpath("//div[2]/div[4]/span")).getText();
+			System.out.println(price);
+			price=price.replace("Rs.", "");
+			System.out.println(price);
+		}
+		else
+		{
+			price=d.findElement(By.xpath("//div[@class='price ']")).getText();
+			System.out.println(price);
+			price=price.replace("Rs.", "");
+			System.out.println(price);
+		}
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	
+	public void mirchimart(String ammount, WebDriver d)
+	{
+		price= d.findElement(By.cssSelector("span.red16")).getText();
+		//System.out.println(s);
+		price=price.replace("Rs.", "").replace(",", "").trim();
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	
+	public void ezoneonline(String ammount, WebDriver d)
+	{
+		price= d.findElement(By.cssSelector("#ctl00_ContentPlaceHolder1_Price_ctl00_lblOfferPrice")).getText();
+		//System.out.println(s);
+		price=price.replace("Rs.", "").replace(",", "").trim();
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	public void ebikree(String ammount, WebDriver d)
+	{
+		price= d.findElement(By.cssSelector("#ContentPlaceHolder1_lblRate")).getText();
+		//System.out.println(s);
+		price=price.replace("INR", "").replace(".00", "");
+		
+		if(price.equals(ammount))
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+"  both are equal");
+		}
+		else
+		{
+			System.out.println("DW Price::"+ammount+" and Marchent price::"+price+" both are NOT equal");
+		}
+	}
+	
+	
+	
+	
 	/**
 	 * This method is used to identify the site name in the url.
 	 * @param d - it is an object for WebDriver
@@ -305,6 +516,7 @@ public class Merchants
 		for (String ccode : d.getWindowHandles()) {
 			d.switchTo().window(ccode);
 		}
+		System.out.println("moved to child window");
 		return amount;
 	}
 	
@@ -316,13 +528,27 @@ public class Merchants
 	public String productLink(WebDriver d) {
 		d.get("http://www.dealwallet.com");
 		d.manage().window().maximize();
-		d.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		d.manage().timeouts().implicitlyWait(3, TimeUnit.MINUTES);
 		String pcode = d.getWindowHandle();
 		//for products link in DealWallet
 		d.findElement(By.linkText("Products")).click();
 		return pcode;
 	}
 	
+	
+	public String dwPrice1(int k, WebDriver d) {
+			
+		d.findElement(By.xpath("//div["+k+"]/div/div[2]/p/a")).click();
+		String ammount=d.findElement(By.cssSelector("span.price")).getText();
+		ammount=ammount.replace(",", "").substring(1).trim();
+		d.findElement(By.xpath("//a/span")).click();
+		for (String ccode : d.getWindowHandles()) {
+			d.switchTo().window(ccode);
+		}
+		
+		System.out.println("moved to child window");
+		return ammount;
+	}
 	
 	
 }

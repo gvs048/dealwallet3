@@ -26,6 +26,7 @@ public class ApparelAndClothing
 	public void testAandP() {
 		Merchants m=new Merchants();
 		String pcode = m.productLink(d);
+		//for Apparel & Clothing category...
 		d.findElement(By.xpath("//ul[2]/li/a")).click();
 		for(int i=1;i<=3;i++)
 		{
@@ -37,7 +38,7 @@ public class ApparelAndClothing
 				switch(sitename[0])
 				{
 				case "yebhi":
-					m.yebhi(ammount , d);
+					m.yebhi(ammount,d);
 					break;
 
 				case "snapdeal":

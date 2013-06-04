@@ -82,7 +82,26 @@ public class ApparelClothing {
 						System.out.println("NO PRICE TO BE DISPLAYED");
 					}
 					break;
-
+					
+				case "www.snapdeal.com":
+					size = d.findElements(By.xpath("//strong/span")).size();
+					if (size != 0) {
+						price = d.findElement(By.xpath("//strong/span"))
+								.getText();
+						price = price.replace(",", "").trim();
+						if (price.equals(ammount)) {
+							System.out.println("DB Price::" + ammount
+									+ " and Marchent price::" + price
+									+ "  both are equal");
+						} else {
+							System.out.println("DB Price::" + ammount
+									+ " and Marchent price::" + price
+									+ " both are NOT equal");
+						}
+					} else {
+						System.out.println("NO PRICE TO BE DISPLAYED");
+					}
+					break;
 				case "www.naaptol.com":
 
 					size=d.findElements(By.xpath("//li/strong")).size();
